@@ -15,14 +15,14 @@ root:.
 
 ## Usage
 
-```sh 
-mmit [template] [-o <path>] [-r <name>]
+```sh
+mmit [template] [-o <path>] [-r <filename>]
 ```
 
 ### Example
 
 ```sh
-mmit component -o components -r button
+mmit component -o /src/components -r button
 ```
 
 ## Options
@@ -31,7 +31,7 @@ mmit component -o components -r button
 
 - `<template>` - Specify template directory
 - `-o <path>` - Specify output path, default is `./`
-- `-r <name>` - Specify new file name. If you do not include this option, the file will retain its original name.
+- `-r <filename>` - Specify new file name. If you do not include this option, the file will retain its original name.
 
 Of course, you can use `-h` or `--help` to display help information.
 
@@ -40,7 +40,11 @@ I recommend adding a shortcut command in scripts like this:
 ```json
 {
   "scripts": {
-    "gen:component": "mmit component -o components -r button" 
+    "gen:component": "mmit component -o /src/components" 
   }
 }
 ```
+
+## TODO
+
+- [ ]  support variables replace
